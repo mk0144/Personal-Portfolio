@@ -6,7 +6,7 @@ let scrollValues = [100, 0, 0];
 // sections
 let sections = document.getElementsByTagName("section");
 let menu_links = document.getElementsByClassName("menu_link");
-menu_links[0].classList.add = "active";
+// menu_links[0].classList.add = "active";
 // \sections
 let roles = [
   "Web Developer",
@@ -17,6 +17,7 @@ let roles = [
 ];
 // \variables
 
+// dynamic text
 setInterval(function () {
   setText(roles[i].charAt(j));
   if (roles[i].length > j) {
@@ -36,7 +37,9 @@ setInterval(function () {
 function setText(text) {
   document.getElementById("roleText").innerHTML += text;
 }
+// \dynamic text
 
+// scroll function
 function scrollFunc(index) {
   let yVal = event.deltaY;
   if (Math.sign(yVal) === 1 && scrollValues[index] > 0) {
@@ -60,6 +63,7 @@ function scrollFunc(index) {
       sections[index - 1].style.height = scrollValues[index - 1] + "vh";
     }
   }
+  // \dynamic text
 
   // let scrollValuesIndex = 0;
   // scrollValues.forEach((element) => {
