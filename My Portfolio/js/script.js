@@ -56,7 +56,7 @@ function scrollFunc(index) {
     if (scrollValues[index] < 100) {
       scrollValues[index] = scrollValues[index] + 25;
       console.log("else's if condition", scrollValues);
-      sections[index].style.height = scrollValues[index] + "vh";
+      sections[index].style.height = scrollValues[index] + "vh"
     } else {
       scrollValues[index - 1] = scrollValues[index - 1] + 25;
       console.log("else if condition", scrollValues);
