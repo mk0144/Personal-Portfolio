@@ -6,7 +6,6 @@ let scrollValues = [100, 0, 0];
 // sections
 let sections = document.getElementsByTagName("section");
 let menu_links = document.getElementsByClassName("menu_link");
-// menu_links[0].classList.add = "active";
 // \sections
 let roles = [
   "Web Developer",
@@ -39,7 +38,7 @@ function setText(text) {
 }
 // \dynamic text
 
-// scroll function
+// scroll section
 function scrollFunc(index) {
   let yVal = event.deltaY;
   if (Math.sign(yVal) === 1 && scrollValues[index] > 0) {
@@ -56,20 +55,12 @@ function scrollFunc(index) {
     if (scrollValues[index] < 100) {
       scrollValues[index] = scrollValues[index] + 25;
       console.log("else's if condition", scrollValues);
-      sections[index].style.height = scrollValues[index] + "vh"
+      sections[index].style.height = scrollValues[index] + "vh";
     } else {
       scrollValues[index - 1] = scrollValues[index - 1] + 25;
       console.log("else if condition", scrollValues);
       sections[index - 1].style.height = scrollValues[index - 1] + "vh";
     }
   }
-  // \dynamic text
-
-  // let scrollValuesIndex = 0;
-  // scrollValues.forEach((element) => {
-  //   if (element === 100) {
-  //     menu_links[scrollValuesIndex].classList.add = "active";
-  //   }
-  // });
-  // \scroll function
+  // \scroll section
 }
