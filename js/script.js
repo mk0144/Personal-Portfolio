@@ -67,5 +67,12 @@ function scrollFunc(index) {
     }
   }
 
+
+  for (i = 0; i < sections.length; i++){
+    if (sections[i].offsetHeight === 0) {
+      console.log("Active section");
+    }
+  }
+
 }
 // \scroll section
