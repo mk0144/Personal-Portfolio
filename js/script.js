@@ -13,6 +13,15 @@ let charPos = 0;
 // \variables
 
 /////////////// functions /////////////
+// menu link click
+function menuLinkClick(index) {
+  for (i = 0; menu_items.length > i; i++){
+    menu_items[i].classList.remove("active");
+  }
+  menu_items[index].classList.add("active");
+}
+// \menu link click
+
 // dynamic text
 setInterval(function () {
   setText(roles[rolesI].charAt(charPos));
@@ -35,32 +44,44 @@ function setText(text) {
 }
 // \dynamic text
 
+// my current age
+function age() {
+  curYear = new Date().getFullYear();
+  document.getElementById("age").innerHTML = curYear - 2000;
+}
+
+age();
+// \my current age
+
 // smooth scroll
 function scrollFunc(index) {
   let scrollToBottom = Math.sign(event.deltaY) === 1;
 
-  if (scrollToBottom && scrollValues[index] > 0) {
+  if (scrollToBottom && scrollValues[index] > 0 && scrollValues.length - 1 !== index) {
     // go top to bottom sections
-    if (scrollValues[index - 1] < 100 && scrollValues[index - 1] > 0) {
-      scrollValues[index - 1] = scrollValues[index - 1] - 100;
-      console.log("if's if", scrollValues);
-      sections[index - 1].style.height = scrollValues[index - 1] + "vh";
-    } else if (scrollValues.length - 1 !== index) {
-      scrollValues[index] = scrollValues[index] - 100;
-      console.log("if's else", scrollValues);
-      sections[index].style.height = scrollValues[index] + "vh";
-    }
-  } else if (!scrollToBottom && scrollValues[0] !== 100) {
+    scrollValues[index] = scrollValues[index] - 100;
+    console.log("if", scrollValues);
+    sections[index].style.height = scrollValues[index] + "vh";
+  } else if (!scrollToBottom && scrollValues[0] !== 100 && scrollValues[index - 1] < 100) {
     // got bottom to top sections
-    if (scrollValues[index] < 100) {
-      scrollValues[index] = scrollValues[index] + 100;
-      console.log("else if's if", scrollValues);
-      sections[index].style.height = scrollValues[index] + "vh";
-    } else if (scrollValues[index - 1] < 100) {
-      scrollValues[index - 1] = scrollValues[index - 1] + 100;
-      console.log("else if's else", scrollValues);
-      sections[index - 1].style.height = scrollValues[index - 1] + "vh";
-    }
+    scrollValues[index - 1] = scrollValues[index - 1] + 100;
+    console.log("else", scrollValues);
+    sections[index - 1].style.height = scrollValues[index - 1] + "vh";
   }
+
+  for (i = 0; menu_items.length > i; i++){
+    menu_items[i].classList.remove("active")
+  }
+
+  if (scrollToBottom && scrollValues[index] === 0) {
+    menu_items[index + 1].classList.add("active");
+  } else if (!scrollToBottom && scrollValues[index - 1] === 100) {
+    menu_items[index - 1].classList.add("active");
+  } else if (!scrollToBottom && scrollValues[0] === 100) {
+    menu_items[0].classList.add("active");
+  } else if (scrollToBottom && scrollValues[scrollValues.length - 1] === 100) {
+    menu_items[scrollValues.length - 1].classList.add("active");
+  } 
+
 }
 // \smooth scroll

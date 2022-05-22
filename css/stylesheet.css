@@ -6,6 +6,8 @@
   --primary: #6200ee;
   --black: #0a0a0a;
   --blackDim: #111111;
+  --darkGray: #202020;
+  --lightGray: #c4c4c4;
 }
 
 * {
@@ -14,7 +16,7 @@
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
-  font-family: "Nunito";
+  font-family: "Nunito", sans-serif;
   font-size: 10px;
   color: white;
 }
@@ -53,8 +55,39 @@ h2 {
   margin: 0 0 1rem;
 }
 
-h5{
+h4 {
+  font-size: 2rem;
+  margin: 0 0 1rem;
+}
+
+h5 {
   font-size: 1.6rem;
+}
+
+.btn {
+  cursor: pointer;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--primary);
+  padding: 1rem 3rem;
+  border: 1px solid var(--primary);
+  border-radius: 0.4rem;
+  margin: 4rem 0 0;
+  transition: 0.5s;
+}
+
+.btn:hover {
+  background-color: var(--primary);
+  color: white;
+  transition: 0.5s;
+}
+
+.highlight {
+  color: var(--primary);
+}
+
+.heading {
+  margin: 0 0 4rem;
 }
 /* \common */
 
@@ -82,6 +115,7 @@ header {
   height: 100vh;
   overflow: hidden;
   margin: 0 0 0 25%;
+  scroll-behavior: smooth;
 }
 
 .pages > section {
@@ -94,22 +128,21 @@ header {
   transition: 2s;
 }
 
-.pages .home {
-  background-color: var(--black);
-  justify-content: center;
-  text-align: center;
+.pages > section > div {
+  width: 100%;
 }
 
-.pages .about {
+.pages section:nth-child(odd) {
   background-color: black;
 }
 
-.pages .skills {
+.pages section:nth-child(even) {
   background-color: var(--black);
 }
 
-.pages .experience {
-  background: black;
+.pages .home {
+  justify-content: center;
+  text-align: center;
 }
 /* \pages */
 /* /main */
@@ -161,7 +194,6 @@ header .menu a:hover {
 }
 
 .home h2 span {
-  font-size: inherit;
   color: var(--primary);
   position: relative;
 }
@@ -227,33 +259,160 @@ header .menu a:hover {
 /* \home */
 
 /* about */
-.about h1 {
-  margin: 0 0 1rem;
-}
-
-.about .bottom{
+.about .bottom {
   display: flex;
-  column-gap: 30px;
+  column-gap: 5rem;
 }
 
 .about .bottom .pic {
-  width: 50%;
+  width: 35%;
   height: 350px;
 }
 
-.about .bottom .info {
-  margin: 3rem 0 0 ;
+.about .bottom .right {
+  width: 65%;
 }
 
-.about .bottom .info li{
+.about .bottom .info {
+  margin: 3rem 0 0;
+  display: grid;
+  row-gap: 1.5rem;
+  font-size: 1.6rem;
+}
+
+.about .bottom .info li {
   font-size: 1.6rem;
   display: grid;
-  grid-template-columns: 25% 75%;
-  
+  grid-template-columns: 30% 70%;
+}
+
+.about .bottom .info li .value {
+  display: flex;
+  column-gap: 0.5rem;
+  font-size: inherit;
 }
 /* \about */
 
-/* skills */
+/* interest */
+.interest .cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 3rem;
+}
 
-/* \skills */
+.interest .col {
+  text-align: center;
+  padding: 2rem 3rem;
+  border: 0.5px solid white;
+  border-radius: 1rem;
+  transition: 1s;
+}
+
+.interest .col:hover {
+  transform: scale(1.1);
+  transition: 1s;
+}
+
+.interest .col i {
+  font-size: 2rem;
+  color: var(--primary);
+  margin: 0 0 1rem;
+}
+
+.interest .col p {
+  font-size: 1.4rem;
+}
+/* \interest */
+
+/* timeline */
+.timeline .bottom {
+  max-width: 800px;
+  margin: 0 auto;
+  display: grid;
+  position: relative;
+}
+
+.timeline .bottom::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  background-color: white;
+  left: 50%;
+  transform: translate(-50%, 0) scale(75%);
+}
+
+.timeline .bottom .col {
+  width: 45%;
+  display: grid;
+  grid-template-columns: 70% 30%;
+  align-items: center;
+  background-color: var(--blackDim);
+  border-radius: 1rem;
+  position: relative;
+}
+
+.timeline .bottom .col::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: var(--primary);
+  border: 2px solid white;
+  border-radius: 50%;
+  right: -14%;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.timeline .bottom .col:nth-child(even)::after {
+  left: -14.5%;
+}
+
+.timeline .col::before {
+  content: "";
+  height: 1px;
+  width: 11%;
+  background-color: wheat;
+  position: absolute;
+  right: -12%;
+}
+
+.timeline .col:nth-child(even)::before {
+  left: -12%;
+}
+
+.timeline .col:nth-child(odd) {
+  border-right: 4px solid var(--primary);
+}
+
+.timeline .col:nth-child(even) {
+  border-left: 4px solid var(--primary);
+  grid-template-columns: 30% 70%;
+  justify-self: flex-end;
+}
+
+.timeline .col:nth-child(odd) .left_col {
+  border-right: 1px solid var(--darkGray);
+}
+
+.timeline .col:nth-child(even) .left_col {
+  order: 2;
+  border-left: 1px solid var(--darkGray);
+}
+
+.timeline .col .left_col {
+  padding: 2rem;
+}
+
+.timeline .col .right_col {
+  padding: 2rem;
+  text-align: center;
+}
+
+.timeline .col h5 {
+  font-size: 1.8rem;
+  margin: 0 0 0.6rem;
+}
+/* \timeline */
 /* \pages */
