@@ -13,16 +13,18 @@
         <!-- sidebar -->
         <header>
             <div class="logo">
-                <h1>MK</h1>
+                <a href="./index.html">
+                    <h1>MK</h1>
+                </a>
             </div>
 
             <ul class="menu">
-                <li class="menu_item" onclick="menuLinkClick(0)"><a href="#home">Home</a></li>
-                <li class="menu_item" onclick="menuLinkClick(1)"><a href="#about">About</a></li>
-                <li class="menu_item" onclick="menuLinkClick(2)"><a href="#interest">Interest</a></li>
-                <li class="menu_item" onclick="menuLinkClick(3)"><a href="#timeline">Timeline</a></li>
-                <!-- <li class="menu_item"><a href="#">Portfolio</a></li> -->
-                <!-- <li class="menu_item"><a href="#">Contact</a></li> -->
+                <li class="menu_item" onclick="menuLinkClick(0)"><a>Home</a></li>
+                <li class="menu_item" onclick="menuLinkClick(1)"><a>About</a></li>
+                <li class="menu_item" onclick="menuLinkClick(2)"><a>Interest</a></li>
+                <li class="menu_item" onclick="menuLinkClick(3)"><a>Timeline</a></li>
+                <li class="menu_item" onclick="menuLinkClick(4)"><a>Portfolio</a></li>
+                <li class="menu_item" onclick="menuLinkClick(5)"><a>Contact</a></li>
             </ul>
 
             <div class="hire">
@@ -35,8 +37,8 @@
         <!-- pages -->
         <div class="pages">
             <!-- home -->
-            <section class="home" id="home" onmousewheel="scrollFunc(0)">
-                <div class="home_inner">
+            <section class="home" onmousewheel="scrollFunc(0)">
+                <div class="section_in">
                     <div class="pic">
                         <img src="https://img.freepik.com/free-photo/handsome-confident-smiling-man-with-hands-crossed-chest_176420-18743.jpg?t=st=1652281811~exp=1652282411~hmac=6ffdf10012cb5dbc06aa54032b22c75f276b0e4fb6505f701aa6eadd4853c3fd&w=826"
                             alt="Self Image">
@@ -63,7 +65,7 @@
 
             <!-- about -->
             <section class="about" id="about" onmousewheel="scrollFunc(1)">
-                <div class="about_inner">
+                <div class="section_in">
                     <div class="bottom">
                         <div class="pic">
                             <img src="https://img.freepik.com/free-photo/attractive-laughing-guy-having-fun-smiling-happy_176420-18839.jpg?t=st=1652270858~exp=1652271458~hmac=8bf7c3dfd1bbd5bdfd2ee253775783bd67b9f300cc793455fe6b38c6d306b22e&w=826"
@@ -130,8 +132,8 @@
 
 
             <!-- interest -->
-            <section class="interest" id="interest" onmousewheel="scrollFunc(2)">
-                <div class="interest_inner">
+            <section class="interest" onmousewheel="scrollFunc(2)">
+                <div class="interest_inner section_in">
                     <div class="heading">
                         <h1>My <span class="highlight">Interests</span></h1>
                     </div>
@@ -190,8 +192,8 @@
 
 
             <!-- timeline -->
-            <section class="timeline" id="timeline" onmousewheel="scrollFunc(3)">
-                <div class="timeline_inner">
+            <section class="timeline" onmousewheel="scrollFunc(3)">
+                <div class="section_in">
                     <div class="heading">
                         <h1>My <span class="highlight">Timeline</span></h1>
                     </div>
@@ -209,7 +211,7 @@
                             <div class="right_col">
                                 <p>2018</p>
                             </div>
-                            
+
                         </div>
 
                         <div class="col">
@@ -253,6 +255,86 @@
                 </div>
             </section>
             <!-- \timeline -->
+
+            <!-- portfolio -->
+            <section class="portfolio" onmousewheel="scrollFunc(4)">
+                <div class="section_in">
+                    <div class="heading">
+                        <h1>My <span class="highlight">Portfolio</span></h1>
+                    </div>
+
+                    <div class="bottom">
+                        <ul class="menuList">
+                            <li class="portfolioMenu" onclick="portfolioMenuClick(0)">All</li>
+                            <li class="portfolioMenu" onclick="portfolioMenuClick(1)">Web Development</li>
+                            <li class="portfolioMenu" onclick="portfolioMenuClick(2)">Web Design</li>
+                        </ul>
+
+                        <div class="contents">
+                            <div class="portfolioMenuContent">
+                                <h2>Content 1</h2>
+                            </div>
+
+                            <div class="portfolioMenuContent">
+                                <h2>Content 2</h2>
+                            </div>
+
+                            <div class="portfolioMenuContent">
+                                <h2>Content 3</h2>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+            <!-- \portfolio -->
+
+
+
+            <!-- contact -->
+            <section class="contact" onmousewheel="scrollFunc(5)">
+                <div class="section_in">
+                    <div class="heading">
+                        <h1><span class="highlight">Contact</span> Me</h1>
+                    </div>
+
+                    <div class="bottom">
+                        <form action="contact.php" method="post">
+                            <div class="textFields">
+                                <div class="form_group">
+                                    <input type="text" name="name" placeholder="Name" class="form_control">
+                                </div>
+    
+                                <div class="form_group">
+                                    <input type="email" name="email" placeholder="Email" class="form_control">
+                                </div>
+    
+                                <div class="form_group">
+                                    <input type="text" name="subject" placeholder="Subject" class="form_control">
+                                </div>
+    
+                                <div class="form_group">
+                                    <textarea rows="4" name="message" placeholder="Message" class="form_control"></textarea>
+                                </div>
+    
+                            </div>
+                            
+                            <div class="form_group btnGroup">
+                                <input type="submit" name="submit" class="btn" value="Send Message">
+                            </div>
+
+                        </form>
+                    </div>
+
+                </div>
+            </section>
+            <!-- contact -->
+
+
+
 
 
         </div>

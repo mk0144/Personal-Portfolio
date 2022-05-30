@@ -89,6 +89,19 @@ h5 {
 .heading {
   margin: 0 0 4rem;
 }
+
+.form_control {
+  width: 100%;
+  font-size: 14px;
+  padding: 12px 20px;
+  color: var(--darkGray);
+  font-weight: 600;
+  caret-color: var(--primary);
+  border: none;
+  outline: none;
+  border-radius: 0.4rem;
+  resize: none;
+}
 /* \common */
 
 /* main */
@@ -113,23 +126,24 @@ header {
 .pages {
   width: 75%;
   height: 100vh;
-  overflow: hidden;
   margin: 0 0 0 25%;
+  overflow: hidden;
   scroll-behavior: smooth;
 }
 
 .pages > section {
   width: 100%;
   height: 100vh;
-  overflow: hidden;
   padding: 0 6rem;
+  overflow: hidden;
   display: flex;
   align-items: center;
-  transition: 2s;
+  transition: 1s;
 }
 
-.pages > section > div {
+.pages > section > .section_in {
   width: 100%;
+  transition: 1.1s;
 }
 
 .pages section:nth-child(odd) {
@@ -156,12 +170,13 @@ header .logo h1 {
 
 header .menu {
   display: grid;
-  row-gap: 1rem;
+  row-gap: 1.2rem;
 }
 
 header .menu a {
   font-size: 2.2rem;
   font-weight: 600;
+  cursor: pointer;
   transition: 0.5s;
 }
 
@@ -177,7 +192,7 @@ header .menu a:hover {
 
 /* pages */
 /* home */
-.home .home_inner {
+.home .section_in {
   max-width: 400px;
 }
 
@@ -415,4 +430,87 @@ header .menu a:hover {
   margin: 0 0 0.6rem;
 }
 /* \timeline */
+
+/* portfolio */
+.portfolio .menuList {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 2rem;
+}
+
+.portfolio .menuList .portfolioMenu {
+  font-weight: 500;
+  padding: 1rem 2rem;
+  border: 1px solid var(--primary);
+  border-radius: 3rem;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.portfolio .menuList .portfolioMenu:hover {
+  background-color: var(--primary);
+  transition: 0.5s;
+}
+
+.portfolio .menuList .portfolioMenu:first-child {
+  background-color: var(--primary);
+}
+
+.portfolio .portfolioMenuContent:not(:first-child) {
+  display: none;
+}
+
+.portfolio .portfolioMenuContent {
+  animation: fade 1s;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0.2;
+  }
+}
+/* \portfolio */
+
+/* contact */
+.contact .bottom .textFields{
+  max-width: 600px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.contact .textFields .form_group:first-child{
+  grid-column:  span 2;
+}
+
+.contact .textFields .form_group:nth-child(2){
+  grid-column: 3 / span 4;
+}
+
+.contact .textFields .form_group:nth-child(3){
+  grid-column: span 6;
+}
+
+.contact .textFields .form_group:nth-child(4){
+  grid-column: span 6;
+}
+
+.contact form .btnGroup {
+  margin: 3rem 0 0;
+  text-align: center;
+}
+
+.contact form .btnGroup .btn{
+  margin: 0;
+  background-color: transparent;
+}
+
+.contact form .btnGroup .btn:hover{
+  background-color: var(--primary);
+  transition: 0.5s;
+}
+/* contact */
 /* \pages */
