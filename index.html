@@ -3,45 +3,48 @@
 
 <head>
     <title>My Portfolio</title>
-    <link href="./css/stylesheet.css" rel="stylesheet">
-    <link href="./css/media.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
+    
+    <!-- styles -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
+        
+        <link href="./css/stylesheet.css" rel="stylesheet">
+        <link href="./css/media.css" rel="stylesheet">
+    <!-- \\\ styles -->
 </head>
 
 <body>
-    <main>
+    <div class="app-container">
         <!-- sidebar -->
-        <header>
+        <aside class="app-sidebar">
             <div class="logo">
                 <a href="./index.html">
                     <h1>MK</h1>
                 </a>
             </div>
 
-            <ul class="menu">
-                <li class="menu_item" onclick="menuLinkClick(0)"><a>Home</a></li>
-                <li class="menu_item" onclick="menuLinkClick(1)"><a>About</a></li>
-                <li class="menu_item" onclick="menuLinkClick(2)"><a>Interest</a></li>
-                <li class="menu_item" onclick="menuLinkClick(3)"><a>Timeline</a></li>
-                <li class="menu_item" onclick="menuLinkClick(4)"><a>Portfolio</a></li>
-                <li class="menu_item" onclick="menuLinkClick(5)"><a>Contact</a></li>
+            <ul class="menu-items">
+                <li class="menu-item"><a class="menu-link" onclick="menuLinkClick(0)">Home</a></li>
+                <li class="menu-item"><a class="menu-link" onclick="menuLinkClick(1)">About</a></li>
+                <li class="menu-item"><a class="menu-link" onclick="menuLinkClick(2)">Interest</a></li>
+                <li class="menu-item"><a class="menu-link" onclick="menuLinkClick(3)">Timeline</a></li>
+                <li class="menu-item"><a class="menu-link" onclick="menuLinkClick(4)">Portfolio</a></li>
+                <li class="menu-item"><a class="menu-link" onclick="menuLinkClick(5)">Contact</a></li>
             </ul>
 
             <div class="hire">
                 <a href="#">Hire Me</a>
             </div>
 
-        </header>
+        </aside>
         <!-- \sidebar -->
 
-        <!-- pages -->
-        <div class="pages">
+        <!-- app-main -->
+        <div class="app-main">
             <!-- home -->
             <section class="home" onmousewheel="scrollFunc(0)">
                 <div class="section_in">
                     <div class="pic">
-                        <img src="https://img.freepik.com/free-photo/handsome-confident-smiling-man-with-hands-crossed-chest_176420-18743.jpg?t=st=1652281811~exp=1652282411~hmac=6ffdf10012cb5dbc06aa54032b22c75f276b0e4fb6505f701aa6eadd4853c3fd&w=826"
-                            alt="Self Image">
+                        <img class="profile-img" src="https://img.freepik.com/free-photo/handsome-confident-smiling-man-with-hands-crossed-chest_176420-18743.jpg?t=st=1652281811~exp=1652282411~hmac=6ffdf10012cb5dbc06aa54032b22c75f276b0e4fb6505f701aa6eadd4853c3fd&w=826" alt="Self Image">
                     </div>
 
                     <h2>I am a <span id="roleText"></span></h2>
@@ -68,8 +71,7 @@
                 <div class="section_in">
                     <div class="bottom">
                         <div class="pic">
-                            <img src="https://img.freepik.com/free-photo/attractive-laughing-guy-having-fun-smiling-happy_176420-18839.jpg?t=st=1652270858~exp=1652271458~hmac=8bf7c3dfd1bbd5bdfd2ee253775783bd67b9f300cc793455fe6b38c6d306b22e&w=826"
-                                alt="Self Image">
+                            <img class="profile-img" src="https://img.freepik.com/free-photo/attractive-laughing-guy-having-fun-smiling-happy_176420-18839.jpg?t=st=1652270858~exp=1652271458~hmac=8bf7c3dfd1bbd5bdfd2ee253775783bd67b9f300cc793455fe6b38c6d306b22e&w=826" alt="Self Image">
                         </div>
 
                         <div class="right">
@@ -338,13 +340,14 @@
 
 
         </div>
-        <!-- \pages -->
+        <!-- \app-main -->
 
-    </main>
+    </div>
 
 
     <!-- script -->
-    <script src="./js/script.js"></script>
+        <script src="./js/script.js"></script>
+    <!-- \\\ scripts -->
 </body>
 
 </html>

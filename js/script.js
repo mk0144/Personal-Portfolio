@@ -3,7 +3,7 @@
 let scrollValues = [100, 100, 100, 100, 100, 100];
 let sections = document.getElementsByTagName("section");
 let section_ins = document.getElementsByClassName("section_in");
-let menu_items = document.getElementsByClassName("menu_item");
+let menu_items = document.getElementsByClassName("menu-item");
 let portfolioMenus = document.getElementsByClassName("portfolioMenu");
 let portfolioMenuContents = document.getElementsByClassName("portfolioMenuContent");
 // \sections
