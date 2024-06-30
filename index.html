@@ -13,6 +13,10 @@
             <link href="./css/common/color-schema.css" rel="stylesheet">
             <link href="./css/common/fonts.css" rel="stylesheet">
             <link href="./css/common/global.css" rel="stylesheet">
+            <link href="./css/common/style-bits.css" rel="stylesheet">
+
+            <link href="./css/components/base-components.css" rel="stylesheet">
+            <link href="./css/components/form.css" rel="stylesheet">
         <!-- \\\ common -->
 
         <!-- components -->
@@ -30,7 +34,7 @@
         <aside class="app-sidebar">
             <div class="logo">
                 <a href="./index.html">
-                    <h1>MK</h1>
+                    <img height="24" src="./assets/images/site-logo.png" alt="Site Logo">
                 </a>
             </div>
 
@@ -59,11 +63,10 @@
                         <img class="profile-img" src="https://img.freepik.com/free-photo/handsome-confident-smiling-man-with-hands-crossed-chest_176420-18743.jpg?t=st=1652281811~exp=1652282411~hmac=6ffdf10012cb5dbc06aa54032b22c75f276b0e4fb6505f701aa6eadd4853c3fd&w=826" alt="Self Image">
                     </div>
 
-                    <h2>I am a <span id="roleText"></span></h2>
+                    <h2 class="title-lg">I am a <span id="roleText"></span></h2>
 
                     <p>
-                        I Am A Web Developer For More Than 6 Months. My Expertise Is To Develop And Design Creative
-                        Websites.
+                        I Am A Web Developer For More Than 6 Months. My Expertise Is To Develop And Design Creative Websites.
                     </p>
 
                     <ul class="social_links">
@@ -87,7 +90,7 @@
                         </div>
 
                         <div class="right">
-                            <h2>Hello I am, <span class="highlight">Muthu Kumar</span></h2>
+                            <h3 class="mB5 title-lg">Hello I am, <span class="highlight">Muthu Kumar</span></h3>
 
                             <p>
                                 I am a Front End Developer adept in all stages of advanced web development.
@@ -96,7 +99,7 @@
 
                             <ul class="info">
                                 <li>
-                                    <h5>Age</h5>
+                                    <div><span>Age</span></div>
                                     <div class="value">
                                         <span>:</span>
                                         <span id="age"></span>
@@ -104,30 +107,30 @@
                                 </li>
 
                                 <li>
-                                    <h5>Phone number</h5>
+                                    <div><span>Phone number</span></div>
                                     <div class="value">
                                         <span>:</span>
-                                        <p>9344853583</p>
+                                        <p>9312345678</p>
                                     </div>
                                 </li>
 
                                 <li class="value">
-                                    <h5>Email</h5>
+                                    <div><span>Email</span></div>
                                     <div class="value">
                                         <span>:</span>
-                                        <span>muthumk10001@gmail.com</span>
+                                        <span>testing@gmail.com</span>
                                     </div>
                                 </li>
 
                                 <li class="value">
-                                    <h5>Address</h5>
+                                    <div><span>Address</span></div>
                                     <div class="value">
                                         <span>:</span>
-                                        <span>
-                                            16A East street, <br>
-                                            Keela Upporani, <br>
-                                            627 414 Tirunelveli.
-                                        </span>
+                                        <address>
+                                            16A abc street, <br>
+                                            XYZ Village, <br>
+                                            600 000 Tirunelveli.
+                                        </address>
                                     </div>
                                 </li>
 
@@ -149,13 +152,13 @@
             <section class="interest" onmousewheel="scrollFunc(2)">
                 <div class="interest_inner section_in">
                     <div class="heading">
-                        <h1>My <span class="highlight">Interests</span></h1>
+                        <h3 class="title-lg">My <span class="highlight">Interests</span></h3>
                     </div>
 
                     <div class="cols">
                         <div class="col">
                             <i class="fa-solid fa-pen-nib"></i>
-                            <h4>Web Design</h4>
+                            <h4 class="title-default mB5">Web Design</h4>
                             <p>
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis quidem at dicta
                                 blanditiis, pariatur magnam error tempore recusandae.
@@ -164,7 +167,7 @@
 
                         <div class="col">
                             <i class="fa-solid fa-video"></i>
-                            <h4>Video Editing</h4>
+                            <h4 class="title-default mB5">Video Editing</h4>
                             <p>
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis quidem at dicta
                                 blanditiis, pariatur magnam error tempore recusandae.
@@ -173,7 +176,7 @@
 
                         <div class="col">
                             <i class="fa-solid fa-microchip"></i>
-                            <h4>Technology</h4>
+                            <h4 class="title-default mB5">Technology</h4>
                             <p>
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis quidem at dicta
                                 blanditiis, pariatur magnam error tempore recusandae.
@@ -182,7 +185,7 @@
 
                         <div class="col">
                             <i class="fa-solid fa-music"></i>
-                            <h4>Music</h4>
+                            <h4 class="title-default mB5">Music</h4>
                             <p>
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis quidem at dicta
                                 blanditiis, pariatur magnam error tempore recusandae.
@@ -209,13 +212,13 @@
             <section class="timeline" onmousewheel="scrollFunc(3)">
                 <div class="section_in">
                     <div class="heading">
-                        <h1>My <span class="highlight">Timeline</span></h1>
+                        <h3 class="title-lg">My <span class="highlight">Timeline</span></h3>
                     </div>
 
                     <div class="bottom">
                         <div class="col">
                             <div class="left_col">
-                                <h5>HS School</h5>
+                                <h5 class="title-lg">HS School</h5>
                                 <p>
                                     Karisal Patti, Tirunelveli.
                                 </p>
@@ -230,7 +233,7 @@
 
                         <div class="col">
                             <div class="left_col">
-                                <h5>Polytechnic</h5>
+                                <h5 class="title-lg">Polytechnic</h5>
                                 <p>Cheranmahadevi, Tirunelveli.</p>
                             </div>
 
@@ -242,7 +245,7 @@
 
                         <div class="col">
                             <div class="left_col">
-                                <h5>Web Developer</h5>
+                                <h5 class="title-lg">Web Developer</h5>
                                 <p>Teynampet, Chennai.</p>
                             </div>
 
@@ -254,7 +257,7 @@
 
                         <div class="col">
                             <div class="left_col">
-                                <h5>Application Developer</h5>
+                                <h5 class="title-lg">Application Developer</h5>
                                 <p>Guindy, Chennai.</p>
                             </div>
 
@@ -274,7 +277,7 @@
             <section class="portfolio" onmousewheel="scrollFunc(4)">
                 <div class="section_in">
                     <div class="heading">
-                        <h1>My <span class="highlight">Portfolio</span></h1>
+                        <h3 class="title-lg">My <span class="highlight">Portfolio</span></h3>
                     </div>
 
                     <div class="bottom">
@@ -312,7 +315,7 @@
             <section class="contact" onmousewheel="scrollFunc(5)">
                 <div class="section_in">
                     <div class="heading">
-                        <h1><span class="highlight">Contact</span> Me</h1>
+                        <h3 class="title-lg"><span class="highlight">Contact</span> Me</h3>
                     </div>
 
                     <div class="bottom">

@@ -36,7 +36,6 @@ function menuLinkClick(index) {
   scrollValues[index] = 100;
   menu_items[index].classList.add("active");
   section_ins[index].style.transform = "scale(1)";
-  console.log(scrollValues);
 }
 // \menu link click
 
@@ -86,7 +85,6 @@ function scrollFunc(index) {
     // go top to bottom sections
     scrollValues[index] = scrollValues[index] - 100;
     sections[index].style.height = scrollValues[index] + "vh";
-    console.log("scroll if" + ",  " + sections[index].style.height);
   } else if (
     !scrollToBottom &&
     scrollValues[0] !== 100 &&
@@ -95,7 +93,6 @@ function scrollFunc(index) {
     // got bottom to top sections
     scrollValues[index - 1] = scrollValues[index - 1] + 100;
     sections[index - 1].style.height = scrollValues[index - 1] + "vh";
-    console.log("scroll else if" + ",  " + sections[index - 1].style.height);
   }
 
   for (i = 0; menu_items.length > i; i++) {
@@ -106,19 +103,15 @@ function scrollFunc(index) {
   if (scrollToBottom && scrollValues[index] === 0) {
     menu_items[index + 1].classList.add("active");
     section_ins[index + 1].style.transform = "scale(1)";
-    console.log("if", scrollValues);
   } else if (!scrollToBottom && scrollValues[index - 1] === 100) {
     menu_items[index - 1].classList.add("active");
     section_ins[index - 1].style.transform = "scale(1)";
-    console.log("else if 1", scrollValues);
   } else if (!scrollToBottom && scrollValues[0] === 100) {
     menu_items[0].classList.add("active");
     section_ins[0].style.transform = "scale(1)";
-    console.log("else if 2", scrollValues);
   } else if (scrollToBottom && scrollValues[scrollValues.length - 1] === 100) {
     menu_items[scrollValues.length - 1].classList.add("active");
     section_ins[index].style.transform = "scale(1)";
-    console.log("else if 3", scrollValues);
   }
 }
 // \smooth scroll

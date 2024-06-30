@@ -1,0 +1,14 @@
+
+
+/* titles */
+.title-xsm, .title-sm, .title-md, .title-default, .title-lg, .title-xlg { font-family: var(--font-sbold); color: var(--c-gray-90); }
+.title-xsm { font-size: 12px; }
+.title-sm { font-size: 14px; }
+.title-md { font-size: 16px; }
+.title-default { font-size: 18px; }
+.title-lg { font-size: 22px; }
+.title-xlg { font-size: 26px; }
+.title-2xlg { font-size: 30px; }
+.title-3xlg { font-size: 36px; }
+/* \\\ titles */
+
